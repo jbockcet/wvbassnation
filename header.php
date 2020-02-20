@@ -30,32 +30,28 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav id="main-nav" class="navbar navbar-expand-md navbar-dark bg-primary" aria-labelledby="main-nav-label">
-
-			<h2 id="main-nav-label" class="sr-only">
-				<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
-			</h2>
+		<nav id="main-nav" class="navbar navbar-expand-md navbar-dark" aria-labelledby="main-nav-label">
 
 		<?php if ( 'container' === $container ) : ?>
-			<div class="container">
+			<div class="container" style="position: relative">
 		<?php endif; ?>
 
-					<!-- Your site title as branding in the menu -->
-					<?php if ( ! has_custom_logo() ) { ?>
+				<!-- Your site title as branding in the menu -->
+				<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+					<img src="/wp-content/themes/wvbassnation/images/BNWVLogo.png" alt="WV BASS Nation Home" />
+				</a>
 
-						<?php if ( is_front_page() && is_home() ) : ?>
-
-							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
-
-						<?php else : ?>
-
-							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
-
-						<?php endif; ?>
-
-					<?php } else {
-						the_custom_logo();
-					} ?><!-- end custom logo -->
+				<ul class="logo-links">
+					<li>
+						<a href="http://www.bassmaster.com/nation" target="_blank">
+							<img src="/wp-content/themes/wvbassnation/images/bassLogo.png" alt="BASS Master Website" id="bassLogo" />
+						</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/WVBASSNATION" target="_blank">
+							<img src="/wp-content/themes/wvbassnation/images/fb.png" alt="WV BASS Nation on Facebook" id="fbLogo" />
+						</a>
+				</ul>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 					<span class="navbar-toggler-icon"></span>

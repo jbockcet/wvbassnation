@@ -2,5 +2,23 @@
 // To overwrite a Bootstrap variable you don´t have to touch the Bootstrap folder.
 // Just copy a variable from src/sass/bootstrap4/_variables.scss, paste it here and edit the value.
 
+$wvbass-blue: #264476;
+$wvbass-gold: #ffc561;
+$wvbass-green: #c7d69d;
+$white: #fff;
+$black: #000;
 
-$primary: #5533ff; // Thats a sample how you could change a BootStrap variable.
+$navbar-dark-color: $wvbass-blue;
+$navbar-dark-hover-color: $white;
+$navbar-dark-active-color: $wvbass-blue;
+
+// Fonts
+$font-family-sans-serif: arial, sans-serif;
+//$font-family-sans-serif: "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$headings-font-family: impact, sans-serif;
+
+$dropdown-link-color: $wvbass-blue;
+$dropdown-link-hover-bg: $wvbass-blue;
+$dropdown-link-hover-color: $white;
+$dropdown-link-active-bg: $wvbass-blue;
+$dropdown-link-active-color: $white;
